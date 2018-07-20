@@ -1,0 +1,63 @@
+<view class='filter'>
+  <view class='classifiation' bindtap='fabiao'>年级
+    <image src="../../public/images/icon/down.png"></image>
+  </view>
+  <view class='method' style='border-left: solid 1px #ededed;'>授课方式
+    <image src="../../public/images/icon/down.png"></image>
+  </view>
+  <view class='selection' style='border-left: solid 1px #ededed;'>筛选
+    <image src="../../public/images/icon/down.png"></image>
+  </view>
+</view>
+<view class='zhezhao' hidden="{{flag}}" bindtap='laqi'></view>
+<!--这是下拉框中的内容，一个文本框和一个按钮，按钮触发拉起事件，表示拉起下拉框-->
+<view class="test3 {{test=='test1'?'test1':'test2'}}" style='display:{{yesorno}};'>
+  <view class='subtitle'>
+    小学
+  </view>
+  <view class='elementary'>
+    <view class='button' data-class="一年级" bindtap='selectClass'>一年级</view>
+    <view class='button' data-class="二年级" bindtap='selectClass'>二年级</view>
+    <view class='button' data-class="三年级" bindtap='selectClass'>三年级</view>
+    <view class='button' data-class="四年级" bindtap='selectClass'>四年级</view>
+  </view>
+  <view class='elementary'>
+    <view class='button' data-class="五年级" bindtap='selectClass'>五年级</view>
+    <view class='button' data-class="六年级" bindtap='selectClass'>六年级</view>
+    <view class='Occupation'></view>
+    <view class='Occupation'></view>
+  </view>
+  <view class='subtitle'>
+    初中
+  </view>
+  <view class='elementary'>
+    <view class='button' data-class="初一" bindtap='selectClass'>初一</view>
+    <view class='button' data-class="初二" bindtap='selectClass'>初二</view>
+    <view class='button' data-class="初三" bindtap='selectClass'>初三</view>
+    <view class='Occupation'></view>
+  </view>
+  <view class='subtitle'>
+    高中
+  </view>
+  <view class='elementary'>
+    <view class='button' data-class="高一" bindtap='selectClass'>高一</view>
+    <view class='button' data-class="高二" bindtap='selectClass'>高二</view>
+    <view class='button' data-class="高三" bindtap='selectClass'>高三</view>
+    <view class='Occupation'></view>
+  </view>
+</view>
+<view class='teacherList' wx:for="{{teacherList}}" wx:for-item="item" wx:for-index="key" wx:key="*this">
+  <view class='teacher'>
+    <view class='left'>
+      <image width="50rpx" heigth="50rpx" src='{{item.avatarUrl}}'></image>
+    </view>
+    <view class='center' style='flex: 3;'>
+      <view class='top'>{{schoolMap[item.Class]}}老师 {{item.nickName[0]}}老师</view>
+      <view class='bottom'>教龄{{item.experience}}年 | 已授{{item.classtime}}课</view>
+    </view>
+    <view class='right'>
+      <view class='top'>￥{{item.Price}}起</view>
+      <view class='bottom'>{{item.distance}}km</view>
+    </view>
+  </view>
+</view>

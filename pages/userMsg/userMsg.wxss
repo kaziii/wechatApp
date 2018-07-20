@@ -1,0 +1,23 @@
+/* pages/userMsg/userMsg.wxss */
+.userMsgBackground {
+  background: #f3f3f3;
+  height: 100%;
+  padding:20rpx 0;
+}
+.cardList {
+  
+  background: white;
+}
+.list {
+  padding: 30rpx 0;
+  border-bottom: solid 1px #f3f3f3;
+  font-size: 30rpx;
+}
+.list .right {
+  float: right;
+  margin-right: 20rpx;
+}
+.list .left {
+  margin-left: 20rpx;
+  color: #CCCCCC;
+}

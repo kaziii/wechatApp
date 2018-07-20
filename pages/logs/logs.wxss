@@ -1,0 +1,78 @@
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  height: 100%;
+}
+.log-item {
+  margin: 10rpx;
+}
+.userBackground {
+  padding: 30rpx;
+  background: #66CC99;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.userImg {
+  height:100rpx;
+  width:100rpx;
+  border-radius:50%;
+  overflow: hidden;
+}
+
+.nickName {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.grade {
+  margin-top: 10rpx;
+  font-size: 20rpx;
+}
+
+.more {
+  width: 50rpx;
+  height: 50rpx;
+  flex:5;
+  display:flex;
+  justify-content:flex-end;
+
+}
+
+.fromList {
+  margin-top: 20rpx;
+  height:150rpx;
+  background:white;
+  display: flex;
+}
+
+.fromList .form {
+  flex: 1;
+  padding: 20rpx;
+  margin: 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fromList .Evaluation {
+  flex: 1;
+  padding: 0 20rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: solid 1px #dedede;
+}
+.fromList .teacher {
+  flex: 1;
+padding: 0 20rpx;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: solid 1px #dedede;
+}

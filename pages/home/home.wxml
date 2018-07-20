@@ -1,0 +1,165 @@
+<swiper indicator-dots="{{indicatorDots}}">
+  <swiper-item>
+    <image src="../../public/images/school.png" class="slide-image" />
+  </swiper-item>
+</swiper>
+<view class='subject'>
+  <view class='block'>
+    <image src='../../public/images/icon/数学.png'></image>
+    <text>数学</text>
+  </view>
+  <view class='block'>
+    <image src='../../public/images/icon/英语.png'></image>
+    <text>英语</text>
+  </view>
+  <view class='block'>
+    <image src='../../public/images/icon/语文.png'></image>
+    <text>语文</text>
+  </view>
+  <view class='block'>
+    <image src='../../public/images/icon/物理.png'></image>
+    <text>物理</text>
+  </view>
+</view>
+<view class='subject' wx:if="{{classShow}}">
+  <view class='block'>
+    <image src='../../public/images/icon/化学.png'></image>
+    <text>化学</text>
+  </view>
+  <view class='block'>
+    <image src='../../public/images/icon/生物.png'></image>
+    <text>生物</text>
+  </view>
+  <view class='block'>
+    <image src='../../public/images/icon/政治.png'></image>
+    <text>政治</text>
+  </view>
+  <view class='block'>
+    <image src='../../public/images/icon/历史.png'></image>
+    <text>历史</text>
+  </view>
+</view>
+<view class='subject' wx:if="{{classShow}}">
+  <view class='block'>
+    <image src='../../public/images/icon/地理.png'></image>
+    <text>地理</text>
+  </view>
+  <view class='block'>
+    <image src='../../public/images/icon/科学.png'></image>
+    <text>科学</text>
+  </view>
+  <view class='block'>
+  </view>
+  <view class='block'>
+  </view>
+</view>
+<view class='downblock' bindtap='downClick'>
+  <image src="{{classShow? downOrup[1]:downOrup[0]}}"></image>
+</view>
+<view class='classifiation'>
+  <text class='title'>找老师</text>
+</view>
+<view class='selfSelect'>
+  <text class='shimochika' bindtap="showModal">{{selectClass}}</text>
+  <text class='shimochika' bindtap="showModal1">{{subject}}</text>
+  <text class='selectQuery' bindtap="toList">选上门老师</text>
+</view>
+<view class='footer'>
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class='modaltitle'>
+      <text>选择年级</text>
+    </view>
+    <view class='modalbody'>
+      <view class='subtitle'>
+        小学
+      </view>
+      <view class='elementary'>
+        <view class='button' data-class="一年级" bindtap='selectClass'>一年级</view>
+        <view class='button' data-class="二年级" bindtap='selectClass'>二年级</view>
+        <view class='button' data-class="三年级" bindtap='selectClass'>三年级</view>
+        <view class='button' data-class="四年级" bindtap='selectClass'>四年级</view>
+      </view>
+      <view class='elementary'>
+        <view class='button' data-class="五年级" bindtap='selectClass'>五年级</view>
+        <view class='button' data-class="六年级" bindtap='selectClass'>六年级</view>
+        <view class='Occupation'></view>
+        <view class='Occupation'></view>
+      </view>
+      <view class='subtitle'>
+        初中
+      </view>
+      <view class='elementary'>
+        <view class='button' data-class="初一" bindtap='selectClass'>初一</view>
+        <view class='button' data-class="初二" bindtap='selectClass'>初二</view>
+        <view class='button' data-class="初三" bindtap='selectClass'>初三</view>
+        <view class='Occupation'></view>
+      </view>
+      <view class='subtitle'>
+        高中
+      </view>
+      <view class='elementary'>
+        <view class='button' data-class="高一" bindtap='selectClass'>高一</view>
+        <view class='button' data-class="高二" bindtap='selectClass'>高二</view>
+        <view class='button' data-class="高三" bindtap='selectClass'>高三</view>
+        <view class='Occupation'></view>
+      </view>
+    </view>
+  </view>
+  <view class="commodity_screen" bindtap="hideModal1" wx:if="{{subjectshowModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{subjectshowModalStatus}}">
+    <view class='modaltitle'>
+      <text>选择科目</text>
+    </view>
+    <view class='subject'>
+      <view class='block' data-subject="数学" bindtap="selectSubject">
+        <image src='../../public/images/icon/数学.png'></image>
+        <text>数学</text>
+      </view>
+      <view class='block' data-subject="英语" bindtap="selectSubject">
+        <image src='../../public/images/icon/英语.png'></image>
+        <text>英语</text>
+      </view>
+      <view class='block' data-subject="语文" bindtap="selectSubject">
+        <image src='../../public/images/icon/语文.png'></image>
+        <text>语文</text>
+      </view>
+      <view class='block' data-subject="物理" bindtap="selectSubject">
+        <image src='../../public/images/icon/物理.png'></image>
+        <text>物理</text>
+      </view>
+    </view>
+    <view class='subject'>
+      <view class='block' data-subject="化学" bindtap="selectSubject">
+        <image src='../../public/images/icon/化学.png'></image>
+        <text>化学</text>
+      </view>
+      <view class='block' data-subject="生物" bindtap="selectSubject">
+        <image src='../../public/images/icon/生物.png'></image>
+        <text>生物</text>
+      </view>
+      <view class='block' data-subject="政治" bindtap="selectSubject">
+        <image src='../../public/images/icon/政治.png'></image>
+        <text>政治</text>
+      </view>
+      <view class='block' data-subject="历史" bindtap="selectSubject">
+        <image src='../../public/images/icon/历史.png'></image>
+        <text>历史</text>
+      </view>
+    </view>
+    <view class='subject'>
+      <view class='block' data-subject="地理" bindtap="selectSubject">
+        <image src='../../public/images/icon/地理.png'></image>
+        <text>地理</text>
+      </view>
+      <view class='block' data-subject="科学" bindtap="selectSubject">
+        <image src='../../public/images/icon/科学.png'></image>
+        <text>科学</text>
+      </view>
+      <view class='block'>
+      </view>
+      <view class='block'>
+      </view>
+    </view>
+  </view>
+</view>

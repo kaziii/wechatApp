@@ -1,0 +1,52 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <block wx:if="{{accessUserInfo}}">
+  <view class='userBackground' bindtap="chooseMsg">
+    <view class="userImg">
+      <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+    </view>
+    <view class="nickName">
+        <open-data type="userNickName" ></open-data>
+        <view class='grade'>{{grade}}</view>
+    </view>
+    <view class='more'>
+      <image src='../../public/images/more.png' style='max-width: 100%;max-height: 100%;heigth: 50rpx;width: 50rpx;'></image>
+    </view>
+  </view>
+  </block>
+  <block wx:else="{{!accessUserInfo}}">
+      <view class='userBackground'>
+    <view class="userImg">
+      <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+    </view>
+
+    <view class='nickName'>
+      <button open-type="getUserInfo">请登录</button>
+    </view>
+    <view class='more'>
+      <image src='../../public/images/more.png' style='max-width: 100%;max-height: 100%;heigth: 50rpx;width: 50rpx;'></image>
+    </view>
+  </view>
+  </block>
+
+  <view class='fromList'>
+    <view class='form' bindtap='enterOrder'>
+      <block>
+        <image src='../../public/images/form.png' style='heigth: 80rpx;width: 60rpx;'></image>
+        <text style='font-size: 28rpx;margin-top: 10rpx;color:##5d5d5d;border-left:none;'>订单</text>
+      </block>
+    </view>
+    <view class='Evaluation'>
+      <block>
+        <image src='../../public/images/good.png' style='heigth: 80rpx;width: 60rpx;'></image>
+        <text style='font-size: 28rpx;margin-top: 10rpx;color:##5d5d5d;border-left:none;'>我的评价</text>
+      </block>
+    </view>
+    <view class='teacher'>
+      <block>
+        <image src='../../public/images/bussiness-man.png' style='heigth: 80rpx;width: 60rpx;'></image>
+        <text style='font-size: 28rpx;margin-top: 10rpx;color:##5d5d5d;border-left:none;'>我的老师</text>
+      </block>
+    </view>
+  </view>
+</view>

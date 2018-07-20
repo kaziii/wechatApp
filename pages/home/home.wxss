@@ -1,0 +1,132 @@
+@import "./weui.wxss";
+.slide-image {
+  height: 100%;
+  width: 100%;
+}
+.subject {
+  display: flex;
+  height: 240rpx;
+}
+.subject .block {
+  flex: 1;
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subject .block image {
+  width: 100%;
+  height: 100%;
+}
+
+.subject .block text {
+  font-size: 30rpx;
+  color: #5d5d5d;
+}
+
+.classifiation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #5d5d5d;
+}
+
+.selfSelect {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+
+}
+.shimochika {
+  font-size: 25rpx;
+  color: #5d5d5d;
+  padding: 10rpx 40rpx;
+  margin: 10rpx 20rpx;
+  flex: 1;
+  border: solid 1px #cccccc;
+  border-radius: 25rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.selectQuery {
+  padding: 10rpx 40rpx;
+  flex: 1;
+  margin: 10rpx 20rpx;
+  background: #66CC99;
+  color: white;
+  font-size: 25rpx;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.commodity_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 20rpx;
+}
+.modaltitle {
+  text-align: center;
+  font-size: 30rpx;
+  color: #000;
+  font-weight: 800px;
+  margin: 30rpx 0;
+}
+.elementary {
+  display: flex;
+  margin: 10rpx 0;
+}
+
+.elementary .button {
+  flex: 1;
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 30rpx;
+  margin: 0 20rpx;
+  border: solid 1rpx #cccccc;
+  color: #5d5d5d;
+  border-radius: 5rpx;
+}
+.elementary .Occupation {
+    flex: 1;
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 30rpx;
+  margin: 0 20rpx;
+  color: #5d5d5d;
+}
+.subtitle {
+  margin-left: 30rpx;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+  color: #5d5d5d;
+}
+.downblock {
+  text-align: center;
+}
+.downblock image {
+  width: 40rpx;
+  height: 30rpx;
+}

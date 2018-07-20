@@ -1,0 +1,190 @@
+.zhezhao {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 80rpx;
+  background: #ededed;
+  overflow: hidden;
+}
+ 
+@keyframes myfirst {
+  from {
+    transform: translateY(-860rpx);
+  }
+ 
+  to {
+    transform: translateY(80rpx);
+  }
+}
+ 
+@keyframes mylast {
+  from {
+    transform: translateY(80rpx);
+  }
+ 
+  to {
+    transform: translateY(-900rpx);
+  }
+}
+ 
+.test2 {
+  animation: mylast;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width: 750rpx;
+  border: 2rpx solid #ededed;
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  z-index: 1454;
+}
+ 
+.test1 {
+  animation: myfirst;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width: 750rpx;
+  border: 2rpx solid #ededed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1454;
+}
+ 
+.btn {
+  width: 700rpx;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10rpx;
+  margin-left: 25rpx;
+  
+}
+ 
+.test3{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+ 
+}
+ 
+.input-content{
+  width: 100%;
+  height: 400rpx;
+  border:2rpx solid #ededed;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+}
+ 
+ 
+.ta{
+  width: 650rpx;
+  height: 250rpx;
+  margin-bottom: 20rpx;
+  margin-top: 110rpx;
+  /* border: 8rpx solid red;  */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter {
+  display: flex;
+  border-bottom: solid 1px #ededed;
+  height: 80rpx;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  background: white;
+}
+.filter image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 10rpx;
+}
+.filter view {
+  flex: 1;
+  margin: 20rpx 0;
+  padding: 0 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #5d5d5d;
+}
+.elementary {
+  display: flex;
+  margin: 10rpx 0;
+}
+
+.elementary .button {
+  flex: 1;
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 30rpx;
+  margin: 0 20rpx;
+  border: solid 1rpx #cccccc;
+  color: #5d5d5d;
+  border-radius: 5rpx;
+}
+.elementary .Occupation {
+    flex: 1;
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 30rpx;
+  margin: 0 20rpx;
+  color: #5d5d5d;
+}
+.subtitle {
+  margin-left: 30rpx;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+  color: #5d5d5d;
+}
+.teacherList {
+  position: relative;
+  top: 80rpx;
+  padding: 20rpx;
+}
+.teacher {
+  display: flex;
+  border-bottom: solid 1rpx #ededed;
+}
+.teacher view {
+  flex: 1;
+  text-align: center;
+}
+.teacher .left image {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 10rpx;
+}
+.teacher .center view{
+  font-size: 30rpx;
+  text-align: left;
+}
+.teacher .center .top {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.teacher .center .bottom {
+  font-size: 20rpx;
+  color: #b7b7b7;
+}
+.teacher .right .top {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+  color: #FF9933;
+}
+.teacher .right .bottom {
+  font-size: 20rpx;
+  color: #b7b7b7;
+  text-align: center;
+}

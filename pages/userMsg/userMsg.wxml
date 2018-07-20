@@ -1,0 +1,9 @@
+<!--pages/userMsg/userMsg.wxml-->
+<view class="userMsgBackground">
+  <view class='cardList' wx:for="{{userInfo}}" wx:for-index="key"  wx:for-item="value">
+    <view class='list'>
+      <text class='left'>{{listKeyMap[key]}}</text>
+      <text class='right'>{{value}}</text>
+    </view>
+  </view>
+</view>

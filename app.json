@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/citySelected/citySelected",
+    "pages/userMsg/userMsg",
+    "pages/order/order",
+    "pages/list/list",
+    "public/images"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#66CC99",
+    "navigationBarTitleText": "HOTEL",
+    "navigationBarTextStyle":"black",
+    "navigationBarBackgroundColor":"#66CC99"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "预约",
+        "iconPath": "public/images/order.png",
+        "selectedIconPath": "public/images/order_selected.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "public/images/account.png",
+        "selectedIconPath": "public/images/account_selected.png"
+      }
+    ]
+  }
+}

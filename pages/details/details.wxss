@@ -1,0 +1,97 @@
+/* pages/details/details.wxss */
+
+.teacherList {
+  padding: 20rpx;
+}
+.teacher {
+  display: flex;
+  border-bottom: solid 1rpx #ededed;
+}
+.teacher view {
+  flex: 1;
+  text-align: center;
+}
+.teacher .left image {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 10rpx;
+}
+.teacher .center view{
+  font-size: 30rpx;
+  text-align: left;
+}
+.teacher .center .top {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.teacher .center .bottom {
+  font-size: 20rpx;
+  color: #b7b7b7;
+}
+
+.teacher .right {
+  display: flex;
+  align-items: center;
+}
+.teacher .right .top {
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+  color: #FF9933;
+}
+.teacher .right .bottom {
+  font-size: 20rpx;
+  color: #b7b7b7;
+  text-align: center;
+}
+
+.class {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: solid 1rpx #ededed;
+}
+.class .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.class .left .top{
+  font-size: 25rpx;
+  color: #666666;
+  margin-bottom: 20rpx;
+}
+
+.class .left .bottom{
+  font-size: 20rpx;
+  color: #b7b7b7;
+}
+.class .right {
+  flex: 1;
+  text-align: right;
+  font-size: 25rpx;
+  color: #666666;
+}
+.class .right image {
+  height: 20rpx;
+  width: 20rpx;
+  margin-top: 20rpx;
+}
+.total {
+  margin-top: 80rpx;
+}
+
+.total .time {
+  display: block;
+  font-size: 30rpx;
+  text-align: center;
+  color: #b7b7b7;
+}
+
+.total .mony {
+  display: block;
+  font-size: 50rpx;
+  text-align: center;
+  color: #FF9933;
+  margin-top: 40rpx;
+}

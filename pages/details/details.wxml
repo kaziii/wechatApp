@@ -1,0 +1,77 @@
+<view class="detail">
+  <view class='teacherList'>
+    <view class='teacher' data-item="{{item}}">
+      <view class='left'>
+        <image width="50rpx" heigth="50rpx" src='{{item.avatarUrl}}'></image>
+      </view>
+      <view class='center' style='flex: 3;'>
+        <view class='top'>{{schoolMap[item.Class]}}老师 {{item.nickName[0]}}老师</view>
+        <view class='bottom'>教龄{{item.experience}}年 | 已授{{item.classtime}}课</view>
+      </view>
+      <view class='right'>
+        <view class='top'>￥{{item.Price}}/小时</view>
+      </view>
+    </view>
+    <view class='class'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style='width: 100%;'>
+        <view style='display: flex'>
+          <view class='left'>
+            <text class='top'>购买课次</text>
+            <text class='bottom'>为保证教学质量，够课28次起</text>
+          </view>
+          <view class='right'>
+            {{array[index]}}
+            <image src='../../public/images/right.png'></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class='class'>
+      <picker bindchange="timebindPickerChange" value="{{timeindex}}" range="{{timearray}}" style='width: 100%;'>
+        <view style='display: flex'>
+          <view class='left'>
+            <text class='top'>每次课时长</text>
+            <text class='bottom'>选择单次课时长</text>
+          </view>
+          <view class='right'>
+            {{timearray[timeindex]}}
+            <image src='../../public/images/right.png'></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class='class' bindtap='toaddress'>
+      <view style='width: 100%;'>
+        <view style='display: flex'>
+          <view class='left'>
+            <text class='top'>地址</text>
+            <text class='bottom'>请选择上课地址</text>
+          </view>
+          <view class='right'>
+            {{address + detail}}
+            <image src='../../public/images/right.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='class' bindtap='toselecttime'>
+      <view style='width: 100%;'>
+        <view style='display: flex'>
+          <view class='left'>
+            <text class='top'>上课事件</text>
+            <text class='bottom'>请选择上课时间</text>
+          </view>
+          <view class='right'>
+            {{classtime}}
+            <image src='../../public/images/right.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='total'>
+      <text class='time'>共计{{totaltime}}小时</text>
+      <text class='mony'>总额：￥{{totalPrice}}</text>
+    </view>
+  </view>
+</view>

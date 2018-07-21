@@ -76,5 +76,13 @@ Page({
         })
       },
     })
+  },
+  detail : (e) => {
+
+    let pararms = JSON.stringify(e.currentTarget.dataset.item);
+
+    wx.navigateTo({
+      url: `../details/details?item=${pararms}`
+    })
   }
 });

@@ -6,6 +6,9 @@
     "pages/userMsg/userMsg",
     "pages/order/order",
     "pages/list/list",
+    "pages/details/details",
+    "pages/address/address",
+    "pages/chooseTime/chooseTime",
     "public/images"
   ],
   "window":{

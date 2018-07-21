@@ -47,7 +47,7 @@
   </view>
 </view>
 <view class='teacherList' wx:for="{{teacherList}}" wx:for-item="item" wx:for-index="key" wx:key="*this">
-  <view class='teacher'>
+  <view class='teacher' data-item="{{item}}" bindtap='detail'>
     <view class='left'>
       <image width="50rpx" heigth="50rpx" src='{{item.avatarUrl}}'></image>
     </view>

@@ -1,0 +1,31 @@
+<view class='teacherList'>
+  <view class='class' bindtap='chooseloaction'>
+    <view style='width: 100%;'>
+      <view style='display: flex'>
+        <view class='left'>
+          <text class='top'>小区/大厦/学校</text>
+        </view>
+        <view class='right'>
+          {{address}}
+          <image src='../../public/images/right.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='class'>
+    <view style='width: 100%;'>
+      <view style='display: flex'>
+        <view class='left'>
+          <text class='top'>楼号-门牌号</text>
+        </view>
+        <view class='right'>
+          <input type="text" bindinput='details'></input>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style='margin-top:30rpx;'>
+    <button type="primary" style='background: #66CC99;' bindtap='submit'>保存</button>
+  </view>
+</view>

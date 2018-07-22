@@ -17,6 +17,7 @@ App({
                 lang: "zh_CN",
                 success : userinfo => {
                   this.globalData.accessUserInfo = true;
+                  this.globalData.userInfo = userinfo;
                   const data = {
                     wecahtCode: loginMsg.code,
                     encryptedData: userinfo.encryptedData,
@@ -28,7 +29,6 @@ App({
                     data: data,
                     success: response => {
                       this.globalData.unionId = response.data.unionId;
-                      console.log(response)
                     }
                   })
                 }

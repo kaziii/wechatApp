@@ -1,1 +1,32 @@
 /* pages/chooseTime/chooseTime.wxss */
+.choosetime {
+  padding: 20rpx;
+}
+.choosetime .title {
+  font-size: 25rpx;
+  color: #666666;
+  margin-left:30rpx;
+}
+.grounp {
+  border-bottom: solid 1px #ededed;
+  padding-bottom: 30rpx;
+}
+
+.checkbox {
+  font-size: 30rpx;
+  padding: 30rpx;
+}
+.time {
+  font-size: 30rpx;
+  color: #666666;
+  display: flex;
+  margin:30rpx;
+
+}
+.time .left {
+  flex: 1;
+}
+.time .right {
+  flex: 3;
+  text-align: right;
+}

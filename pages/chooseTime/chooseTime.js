@@ -1,66 +1,69 @@
-// pages/chooseTime/chooseTime.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    items: [
+      { name: 'Monday', value: '周一'},
+      { name: 'Tuesday', value: '周二'},
+      { name: 'Wednesday', value: '周三' },
+      { name: 'Thursday', value: '周四' },
+      { name: 'Friday', value: '周五' },
+      { name: 'Saturday', value: '周六' },
+      { name: 'Sunday', value: '周日' },
+    ],
+    weekMap: {
+      Monday: '周一',
+      Tuesday:'周二',
+      Wednesday: '周三',
+      Thursday: '周四',
+      Friday: '周五',
+      Saturday: '周六',
+      Sunday: '周日'
+    },
+    chooseWeek: []
   },
+  checkboxChange: function (e) {
+    
+    let chooseWeek = e.detail.value;
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+    chooseWeek = chooseWeek.map((list) => {
+      let item = {key: list, value: '请选择时间'};
+
+      list = item;
+
+      return list;
+    })
+
+    this.setData({
+      chooseWeek: chooseWeek
+    })
   },
+  bindTimeChange: function(e) {
+    var that = this;
+    let newchooseWeek = that.data.chooseWeek;
+    let key = e.target.dataset.item.key;
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+    newchooseWeek = newchooseWeek.map((list) => {
+
+        if(list.key == key) {
+          list.value = e.detail.value;
+        }
+        return list;
+    })
+
+    that.setData({
+      chooseWeek: newchooseWeek
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  submit: function () {
+    var that = this;
+    var chooseWeek = that.data.chooseWeek;
+    var pages = getCurrentPages();
+    var prevPage = pages[pages.length - 2];
+    prevPage.setData({
+      chooseWeek: chooseWeek
+    }, () => {
+      wx.navigateBack({
+        delta: 1
+      })
+    })
   }
 })

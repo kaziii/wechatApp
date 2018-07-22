@@ -58,11 +58,13 @@
       <view style='width: 100%;'>
         <view style='display: flex'>
           <view class='left'>
-            <text class='top'>上课事件</text>
+            <text class='top'>上课时间</text>
             <text class='bottom'>请选择上课时间</text>
           </view>
           <view class='right'>
-            {{classtime}}
+            <block wx:for="{{chooseWeek}}" wx:for-item="item">
+              <text>{{weekMap[item.key]}} {{item.value}}</text>
+            </block>
             <image src='../../public/images/right.png'></image>
           </view>
         </view>
@@ -73,5 +75,10 @@
       <text class='time'>共计{{totaltime}}小时</text>
       <text class='mony'>总额：￥{{totalPrice}}</text>
     </view>
+
+
+  </view>
+  <view class='footer'>
+    <button type="primary" bindtap='postorder'>提交订单</button>
   </view>
 </view>

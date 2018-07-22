@@ -19,9 +19,19 @@ Page({
     totalPrice: '',
     address: '',
     detail: '',
-    classtime: ''
+    classtime: '',
+    chooseWeek: [],
+    weekMap: {
+      Monday: '周一',
+      Tuesday: '周二',
+      Wednesday: '周三',
+      Thursday: '周四',
+      Friday: '周五',
+      Saturday: '周六',
+      Sunday: '周日'
+    },
   },
-  bindPickerChange: function (e) {
+  bindPickerChange: function(e) {
 
     this.setData({
       index: e.detail.value
@@ -30,7 +40,7 @@ Page({
     })
   },
 
-  timebindPickerChange: function (e) {
+  timebindPickerChange: function(e) {
     this.setData({
       timeindex: e.detail.value
     }, () => {
@@ -55,7 +65,7 @@ Page({
       totalPrice: totalPrice
     })
   },
-  onLoad: function (options) {
+  onLoad: function(options) {
     let item = JSON.parse(options.item);
     this.setData({
       item: item
@@ -67,59 +77,101 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-  
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function() {
+
   },
-  toaddress: function () {
+  toaddress: function() {
     wx.navigateTo({
       url: '../address/address',
     })
   },
-  toselecttime: function () {
+  toselecttime: function() {
     wx.navigateTo({
       url: '../chooseTime/chooseTime',
+    })
+  },
+  postorder: function() {
+    var that = this;
+    wx.showModal({
+      title: '确认提交订单?',
+      cancelText: '我在看看',
+      confirmText:'确认提交',
+      content: '提交后将会以短信或邮件通知老师~',
+      success: function(res) {
+        if (res.confirm) {
+          var app = getApp();
+          const unionId = app.globalData.unionId;
+          const techerId = that.data.item.unionId;
+          const techerName = that.data.item.nickName;
+          const address = that.data.item.address + that.data.item.detail;
+          const type = 'onemore';
+          const classTime = JSON.stringify(that.data.chooseWeek);
+          const orderType = 'ing';
+
+          console.log(classTime)
+          wx.request({
+            url: 'http://localhost:3000/order',
+            method: 'POST',
+            data: {
+              unionId: unionId,
+              techerId: techerId,
+              techerName: techerName,
+              type: type,
+              classTime: classTime,
+              orderType: orderType,
+              address: address
+            },
+            success: function (response) {
+              console.log(response);
+            }
+          })
+
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
     })
   }
 })

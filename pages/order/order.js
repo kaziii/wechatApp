@@ -1,3 +1,4 @@
+var moment = require('../../utils/moment');
 // orders.js
 Page({
 
@@ -67,6 +68,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (cb1, cb2) {
+
     var App = getApp();
     console.log(App.globalData)
     wx.request({

@@ -7,14 +7,14 @@
       <block wx:for="{{orderList}}" wx:for-index="index" wx:for-item="item" wx:key="*this" wx:if="{{item.orderType == 'notConfirmation'}}">
       <view class='cardList'>
         <view class='head'>
-          订单时间: 2018年07月13日 15:31
+          订单时间: {{moment(item.ordertime)}}
         </view>
         <view class='body'>
           <view class='photo'>
             <image src="{{item.avatarUrl}}"></image>
             <view class='type'>
               <text style='font-size: 28rpx;'>{{item.class}} {{item.Subject}} <text class='span'>{{item.type === 'onemore'? '一对一': null}}</text></text>
-              <text style='font-size: 25rpx;margin-top: 15rpx;color:#5d5d5d;'>初高中数学郑老师</text>
+              <text style='font-size: 25rpx;margin-top: 15rpx;color:#5d5d5d;'>{{item.techerName}}</text>
             </view>
           </view>
           <view class='msg'>
@@ -34,14 +34,14 @@
     <block wx:for="{{orderList}}" wx:for-index="index" wx:for-item="item" wx:key="*this" wx:if="{{item.orderType != 'notConfirmation'}}">
       <view class='cardList'>
         <view class='head'>
-          订单时间: 2018年07月13日 15:31
+          订单时间:{{item.ordertime}}
         </view>
         <view class='body'>
           <view class='photo'>
             <image src="{{item.avatarUrl}}"></image>
             <view class='type'>
               <text style='font-size: 28rpx;'>{{item.class}} {{item.Subject}} <text class='span'>{{item.type === 'onemore'? '一对一': null}}</text></text>
-              <text style='font-size: 25rpx;margin-top: 15rpx;color:#5d5d5d;'>初高中数学郑老师</text>
+              <text style='font-size: 25rpx;margin-top: 15rpx;color:#5d5d5d;'>{{item.techerName}}</text>
             </view>
           </view>
           <view class='msg'>

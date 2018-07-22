@@ -1,2 +1,29 @@
 <!--pages/chooseTime/chooseTime.wxml-->
-<text>pages/chooseTime/chooseTime.wxml</text>
+<view class='choosetime'>
+  <text class='title'>选择每周几上课</text>
+  <text style='font-size:25rpx;color:#b5b5b5;'> (可多选)</text>
+  <text style='font-size:25rpx;color:#b5b5b5;float: right'>一周{{chooseWeek.length}}次</text>
+  <view style='margin-top: 30rpx;' class='grounp'>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </checkbox-group>
+  </view>
+  <block wx:for="{{chooseWeek}}" wx:for-item="item" wx:for-index="key" wx:key="*this">
+    <view class='time'>
+      <view class='left'>{{weekMap[item.key]}}</view>
+      <view class='right'>
+        <picker mode="time" value="{{item.value}}" start="09:00" end="21:00" data-item="{{item}}" bindchange='bindTimeChange'>
+          <view class="picker">
+            {{item.value}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </block>
+
+  <view style='margin-top: 30rpx;'>
+    <button type="primary" style='background: #66CC99;' bindtap='submit'>保存</button>
+  </view>
+</view>

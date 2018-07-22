@@ -20,7 +20,7 @@ Page({
    */
   onLoad: function (options) {
     var App = getApp();
-    var newUserInfo = App.globalData.userInfo;
+    var newUserInfo = App.globalData.userInfo.userInfo;
 
     delete newUserInfo.gender;
     delete newUserInfo.avatarUrl;

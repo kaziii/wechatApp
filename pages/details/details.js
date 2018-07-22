@@ -164,7 +164,9 @@ Page({
               address: address
             },
             success: function (response) {
-              console.log(response);
+              wx.navigateTo({
+                url: '../order/order',
+              })
             }
           })
 

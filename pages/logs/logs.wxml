@@ -36,12 +36,12 @@
         <text style='font-size: 28rpx;margin-top: 10rpx;color:##5d5d5d;border-left:none;'>订单</text>
       </block>
     </view>
-    <view class='Evaluation'>
+    <!-- <view class='Evaluation'>
       <block>
         <image src='../../public/images/good.png' style='heigth: 80rpx;width: 60rpx;'></image>
         <text style='font-size: 28rpx;margin-top: 10rpx;color:##5d5d5d;border-left:none;'>我的评价</text>
       </block>
-    </view>
+    </view> -->
     <view class='teacher'>
       <block>
         <image src='../../public/images/bussiness-man.png' style='heigth: 80rpx;width: 60rpx;'></image>

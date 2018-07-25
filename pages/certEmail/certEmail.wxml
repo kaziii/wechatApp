@@ -1,0 +1,9 @@
+<view class="userMsgBackground">
+  <view class='cardList'>
+    <view class='list'>
+      <text class='left' style='flex:1;'>邮箱</text>
+      <input type='number' placeholder="认证邮箱" style='flex:2;' value="{{email}}" bindinput='setemail' disabled="{{countdown != '发送验证邮件'}}"></input>
+        <button size="mini" style='flex:1;background:white;padding:0rpx;margin:0 10rpx;' disabled="{{!email || countdown != '发送验证邮件'}}" bindtap='sendemail'>{{countdown}}</button>
+    </view>
+  </view>
+</view>

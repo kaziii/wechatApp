@@ -7,27 +7,55 @@ Page({
   data: {
     userInfo: {},
     listKeyMap: {
-      nickName: '姓名',
-      language: '语言',
-      city: '城市',
-      province: '省份',
-      country: '国家'
+      nickName: {name:'姓名'},
+      language: {name:'语言'},
+      city: {name:'城市'},
+      province: {name:'省份'},
+      country: {name:'国家'},
+      phone: { name: '电话', Placeholder: '未认证电话', active: 'Certificationsms'},
+      email: { name: "邮箱", Placeholder: '未认证邮箱', active: 'Certificationeamail'},
+      class: {name:'年级'},
+      Subject: {name:'科目'}
     }
   },
+  Certificationsms: function (e) {
 
+    wx.navigateTo({
+      url: '../certPhone/certPhone',
+    })
+  },
+  Certificationeamail: function (e) {
+    wx.navigateTo({
+      url: '../certEmail/certEmail',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     var App = getApp();
-    var newUserInfo = App.globalData.userInfo.userInfo;
+    const unionId = App.globalData.unionId;
 
-    delete newUserInfo.gender;
-    delete newUserInfo.avatarUrl;
+    wx.request({
+      url: 'http://localhost:3000/login/getUser',
+      method: 'GET',
+      data: {
+        openId: unionId
+      },
+      success: rsp => {
+        let item = rsp.data;
 
+        delete item.avatarUrl;
+        delete item.unionId;
+        delete item.emailCode;
+        delete item.emailDate;
+        delete item.emailIslive;
 
-    this.setData({
-      userInfo: newUserInfo
+        this.setData({
+          userInfo: item
+        })
+      }
     })
   },
 

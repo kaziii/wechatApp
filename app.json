@@ -9,12 +9,14 @@
     "pages/details/details",
     "pages/address/address",
     "pages/chooseTime/chooseTime",
+    "pages/certPhone/certPhone",
+    "pages/certEmail/certEmail",
     "public/images"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "backgroundColor": "#66CC99",
-    "navigationBarTitleText": "HOTEL",
+    "navigationBarTitleText": "私塾",
     "navigationBarTextStyle":"black",
     "navigationBarBackgroundColor":"#66CC99"
   },
